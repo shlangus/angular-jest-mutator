@@ -26,6 +26,27 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-jest-mutator app is running!');
+    expect(compiled.querySelector('.title')?.textContent).toContain('angular-jest-mutator');
+  });
+
+  describe('Weird tests should be bad at killing mutants', () => {
+    it('expect(true)', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      fixture.detectChanges();
+
+      expect(true).toBe(true);
+    });
+
+    it('expect type', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+
+      expect(typeof fixture.componentInstance.sum(1, 2)).toBe('number');
+    });
+
+    it('truthy', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+
+      expect(fixture.componentInstance.gt(2)(1)).toBeTruthy();
+    });
   });
 });
