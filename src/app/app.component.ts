@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-jest-mutator';
 
-  sum(a: number, b: number) {
+  sum(a: number, b: number): number {
     return a + b;
   }
 
-  gt(a: number) {
+  gt(a: number): (b: number) => boolean {
     return (b: number) => a > b;
   }
 

@@ -1,0 +1,15 @@
+/* https://stryker-mutator.io/docs/stryker-js/troubleshooting/#error-when-running-stryker-with-the-typescript-checker-no-watcher-is-registered */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": []
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts"
+  ]
+}

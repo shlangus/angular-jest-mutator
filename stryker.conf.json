@@ -13,5 +13,7 @@
     "enableFindRelatedTests": true
   },
   "mutate": [ "src/**/*.component.ts" ],
-  "coverageAnalysis": "off"
+  "coverageAnalysis": "off",
+  "checkers": ["typescript"],
+  "tsconfigFile": "tsconfig.stryker.json"
 }
